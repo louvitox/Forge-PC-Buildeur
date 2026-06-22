@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORGE — Configurateur PC</title>
+<meta name="description" content="Construis ton PC pièce par pièce : compatibilité en direct, comparaison de prix, 5 700+ composants réels.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY0ZDNkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmY3YTNkIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMwYTBhMGYiLz4KPHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIiByeD0iMTMiIGZpbGw9InVybCgjZykiLz4KPGcgZmlsbD0iIzBhMGEwZiI+CjxwYXRoIGQ9Ik0zMiAxNGE0IDQgMCAwIDEgNCA0djIuM2ExMiAxMiAwIDAgMSAzLjEgMS44bDItMS4xYTQgNCAwIDAgMSA1LjUgMS41bDEgMS43YTQgNCAwIDAgMS0xLjUgNS41bC0yIDEuMWExMiAxMiAwIDAgMSAwIDMuNmwyIDEuMWE0IDQgMCAwIDEgMS41IDUuNWwtMSAxLjdhNCA0IDAgMCAxLTUuNSAxLjVsLTItMS4xYTEyIDEyIDAgMCAxLTMuMSAxLjhWNDZhNCA0IDAgMCAxLTQgNGgtMmE0IDQgMCAwIDEtNC00di0yLjNhMTIgMTIgMCAwIDEtMy4xLTEuOGwtMiAxLjFhNCA0IDAgMCAxLTUuNS0xLjVsLTEtMS43YTQgNCAwIDAgMSAxLjUtNS41bDItMS4xYTEyIDEyIDAgMCAxIDAtMy42bC0yLTEuMWE0IDQgMCAwIDEtMS41LTUuNWwxLTEuN2E0IDQgMCAwIDEgNS41LTEuNWwyIDEuMWExMiAxMiAwIDAgMSAzLjEtMS44VjE4YTQgNCAwIDAgMSA0LTR6IiBvcGFjaXR5PSIuMjUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI5IiBmaWxsPSJub25lIiBzdHJva2U9IiMwYTBhMGYiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzLjUiIGZpbGw9IiMwYTBhMGYiLz4KPC9zdmc+">
+<!-- Open Graph (aperçu de partage) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="FORGE — Configurateur PC">
+<meta property="og:description" content="Construis ton PC pièce par pièce : compatibilité en direct, comparaison de prix, 5 700+ composants réels.">
+<meta property="og:image" content="https://louvitox.github.io/forge/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FORGE — Configurateur PC">
+<meta name="twitter:description" content="Construis ton PC pièce par pièce : compatibilité en direct, comparaison de prix.">
+<meta name="twitter:image" content="https://louvitox.github.io/forge/og.png">
+<style>
+:root{
+  --bg:#0a0a0f;--surface:#13131c;--surface-2:#1b1b27;
+  --border:rgba(255,255,255,.08);--border-bright:rgba(255,255,255,.16);
+  --text:#f4f4f8;--text-dim:#9494a8;--text-faint:#5c5c70;
+  --accent:#ff4d3d;--accent-glow:rgba(255,77,61,.35);
+  --green:#34d399;--amber:#fbbf24;--red:#f87171;--radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 500px at 12% -8%,rgba(255,77,61,.10),transparent 60%),radial-gradient(800px 600px at 95% 8%,rgba(99,102,241,.08),transparent 55%),radial-gradient(700px 700px at 50% 120%,rgba(52,211,153,.05),transparent 60%);pointer-events:none}
+header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);background:rgba(10,10,15,.72);border-bottom:1px solid var(--border)}
+.nav{max-width:1240px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand .mark{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#ff7a3d);box-shadow:0 4px 18px var(--accent-glow);font-size:16px}
+.brand span{background:linear-gradient(120deg,#fff,#b9b9cf);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.brand small{font-weight:500;font-size:11px;color:var(--text-faint);letter-spacing:.18em;text-transform:uppercase;margin-left:2px}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.ghost-btn{font:inherit;font-size:13px;font-weight:600;color:var(--text-dim);cursor:pointer;background:transparent;border:1px solid var(--border);padding:9px 15px;border-radius:11px;transition:.18s}
+.ghost-btn:hover{color:var(--text);border-color:var(--border-bright);background:var(--surface)}
+.wrap{max-width:1240px;margin:0 auto;padding:36px 28px 90px;display:grid;grid-template-columns:1fr 372px;gap:28px;align-items:start}
+.hero{grid-column:1/-1;padding:8px 0 30px}
+.hero .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+.hero h1{font-size:clamp(34px,5vw,54px);font-weight:850;letter-spacing:-.035em;line-height:1.02;margin-bottom:16px}
+.hero h1 .grad{background:linear-gradient(110deg,#fff 20%,var(--accent) 110%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:17px;color:var(--text-dim);max-width:600px;line-height:1.55}
+.hero .count{display:inline-block;margin-top:14px;font-size:13px;color:var(--text-faint);background:var(--surface);border:1px solid var(--border);padding:6px 12px;border-radius:9px}
+.hero .count b{color:var(--accent)}
+.parts{display:flex;flex-direction:column;gap:12px}
+.part{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;display:flex;align-items:center;gap:16px;transition:.2s;position:relative;overflow:hidden}
+.part:hover{border-color:var(--border-bright);transform:translateY(-1px)}
+.part.filled{background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(120deg,rgba(255,77,61,.4),transparent) border-box;border:1px solid transparent}
+.part-ico{width:46px;height:46px;flex:none;border-radius:12px;display:grid;place-items:center;background:var(--surface-2);font-size:22px;border:1px solid var(--border)}
+.part-meta{flex:1;min-width:0}
+.part-cat{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);font-weight:700;margin-bottom:3px}
+.part-name{font-size:15px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.part-name.empty{color:var(--text-faint);font-weight:500;font-style:italic}
+.part-spec{font-size:12px;color:var(--text-dim);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.part-price{font-weight:700;font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.part-price .vendor{display:block;font-size:11px;font-weight:500;color:var(--text-faint);margin-top:2px}
+.part-act{font:inherit;font-size:13px;font-weight:600;cursor:pointer;padding:8px 16px;border-radius:11px;border:1px solid var(--border-bright);background:var(--surface-2);color:var(--text);transition:.18s;white-space:nowrap}
+.part-act:hover{background:var(--accent);border-color:var(--accent);box-shadow:0 4px 16px var(--accent-glow)}
+.part-act.change{background:transparent;color:var(--text-dim)}
+.part-act.change:hover{background:var(--surface-2);color:var(--text);box-shadow:none}
+.side{position:sticky;top:96px;display:flex;flex-direction:column;gap:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:22px}
+.card h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);font-weight:700;margin-bottom:16px}
+.total-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;gap:10px}
+.total-row .lbl{font-size:13px;color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.total-row .val{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.total-big{display:flex;align-items:baseline;justify-content:space-between;padding-top:16px;margin-top:10px;border-top:1px solid var(--border)}
+.total-big .lbl{font-size:15px;font-weight:600}
+.total-big .val{font-size:30px;font-weight:850;letter-spacing:-.03em;font-variant-numeric:tabular-nums;background:linear-gradient(120deg,#fff,var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.compat-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.compat-dot{width:10px;height:10px;border-radius:50%;flex:none}
+.compat-dot.ok{background:var(--green);box-shadow:0 0 12px var(--green)}
+.compat-dot.warn{background:var(--amber);box-shadow:0 0 12px var(--amber)}
+.compat-dot.err{background:var(--red);box-shadow:0 0 12px var(--red)}
+.compat-status{font-size:15px;font-weight:700}
+.compat-list{display:flex;flex-direction:column;gap:9px}
+.compat-item{display:flex;gap:9px;font-size:13px;line-height:1.4;color:var(--text-dim);align-items:flex-start}
+.compat-item .ci{flex:none;font-weight:700;margin-top:1px}
+.compat-item.ok .ci{color:var(--green)}.compat-item.warn .ci{color:var(--amber)}.compat-item.err .ci{color:var(--red)}
+.compat-empty{font-size:13px;color:var(--text-faint);line-height:1.5}
+.psu-meter{margin-top:14px}
+.psu-bar{height:8px;border-radius:6px;background:var(--surface-2);overflow:hidden;margin:8px 0 6px}
+.psu-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--green),var(--amber));transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.psu-txt{font-size:12px;color:var(--text-dim);display:flex;justify-content:space-between}
+.cta-buy{width:100%;font:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;padding:15px;border-radius:14px;border:none;color:#fff;background:linear-gradient(135deg,var(--accent),#ff7a3d);box-shadow:0 8px 28px var(--accent-glow);transition:.2s}
+.cta-buy:hover{transform:translateY(-2px);box-shadow:0 12px 34px var(--accent-glow)}
+.cta-buy:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+.overlay{position:fixed;inset:0;z-index:100;background:rgba(5,5,10,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:none;align-items:flex-start;justify-content:center;padding:60px 20px;overflow-y:auto}
+.overlay.show{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.modal{width:100%;max-width:780px;background:var(--surface);border:1px solid var(--border-bright);border-radius:24px;overflow:hidden;animation:rise .28s cubic-bezier(.2,.9,.3,1)}
+@keyframes rise{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:none}}
+.modal-head{padding:22px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.modal-head h2{font-size:20px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
+.modal-head .x{font:inherit;font-size:22px;color:var(--text-dim);background:none;border:none;cursor:pointer;width:36px;height:36px;border-radius:10px;transition:.15s}
+.modal-head .x:hover{background:var(--surface-2);color:var(--text)}
+.modal-search{padding:16px 24px;border-bottom:1px solid var(--border);position:relative}
+.modal-search input{width:100%;font:inherit;font-size:15px;color:var(--text);background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:12px 16px 12px 42px;outline:none;transition:.18s}
+.modal-search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.modal-search input::placeholder{color:var(--text-faint)}
+.modal-search .sico{position:absolute;left:38px;top:50%;transform:translateY(-50%);color:var(--text-faint);font-size:16px}
+.modal-sub{padding:10px 24px;font-size:12px;color:var(--text-faint);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.modal-sort{font:inherit;font-size:12px;color:var(--text-dim);background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:5px 10px;cursor:pointer}
+.modal-list{max-height:52vh;overflow-y:auto;padding:8px}
+.opt{display:flex;align-items:center;gap:14px;padding:13px 16px;border-radius:14px;cursor:pointer;transition:.12s;border:1px solid transparent}
+.opt:hover{background:var(--surface-2);border-color:var(--border)}
+.opt.incompatible{opacity:.4}
+.opt-info{flex:1;min-width:0}
+.opt-name{font-size:15px;font-weight:600;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.opt-spec{font-size:12px;color:var(--text-dim);display:flex;gap:6px;flex-wrap:wrap}
+.opt-spec .tag{background:var(--surface);padding:2px 8px;border-radius:6px;border:1px solid var(--border);font-size:11px;white-space:nowrap}
+.opt-badge{font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:6px;color:var(--red);background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.25);white-space:nowrap}
+.opt-price{text-align:right;flex:none}
+.opt-price .p{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+.opt-price .v{font-size:11px;color:var(--text-faint);margin-top:2px}
+.modal-list::-webkit-scrollbar{width:8px}
+.modal-list::-webkit-scrollbar-thumb{background:var(--border-bright);border-radius:8px}
+.empty-res{padding:40px 20px;text-align:center;color:var(--text-faint);font-size:14px}
+.note{grid-column:1/-1;margin-top:8px;font-size:12px;color:var(--text-faint);text-align:center;line-height:1.6}
+.note code{background:var(--surface-2);padding:2px 7px;border-radius:5px;color:var(--text-dim);font-size:11px}
+.loading{grid-column:1/-1;text-align:center;padding:60px;color:var(--text-dim)}
+@media(max-width:960px){.wrap{grid-template-columns:1fr}.side{position:static;order:-1}}
+@media(max-width:560px){.nav{padding:14px 18px}.wrap{padding:24px 18px 70px}.part{flex-wrap:wrap}.part-act{margin-left:58px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand"><div class="mark">⚙</div><span>FORGE</span><small>PC Builder</small></div>
+    <div class="nav-actions">
+      <button class="ghost-btn" onclick="resetBuild()">Réinitialiser</button>
+      <button class="ghost-btn" onclick="shareBuild()">Partager</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Assemble ta machine</div>
+    <h1>Construis ton PC,<br><span class="grad">pièce par pièce.</span></h1>
+    <p>Choisis chaque composant parmi des milliers de références réelles. FORGE vérifie la compatibilité en direct et compare les prix des fournisseurs pour trouver le moins cher.</p>
+    <div class="count" id="catalogCount">Chargement du catalogue…</div>
+  </div>
+
+  <div class="parts" id="parts"><div class="loading">Chargement des composants…</div></div>
+
+  <aside class="side">
+    <div class="card">
+      <h3>Compatibilité</h3>
+      <div class="compat-head"><div class="compat-dot ok" id="compatDot"></div><div class="compat-status" id="compatStatus">Aucun composant</div></div>
+      <div class="compat-list" id="compatList"><div class="compat-empty">Ajoute des composants pour vérifier qu'ils fonctionnent ensemble.</div></div>
+      <div class="psu-meter" id="psuMeter" style="display:none">
+        <div class="psu-bar"><div class="psu-fill" id="psuFill" style="width:0%"></div></div>
+        <div class="psu-txt"><span id="psuLoad">0 W</span><span id="psuCap">—</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Récapitulatif</h3>
+      <div id="summaryRows"></div>
+      <div class="total-big"><span class="lbl">Total</span><span class="val" id="grandTotal">0 €</span></div>
+      <button class="cta-buy" id="buyBtn" disabled onclick="showBuy()">Voir où acheter</button>
+    </div>
+  </aside>
+
+  <div class="note">Prix illustratifs répartis entre fournisseurs (LDLC, Topachat, Amazon, Cybertek, Materiel.net). Catalogue réel issu d'un dataset PCPartPicker. Branche une API marchande pour des prix live.</div>
+</div>
+
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-head"><h2 id="modalTitle"></h2><button class="x" onclick="closeModal()">✕</button></div>
+    <div class="modal-search"><span class="sico">🔍</span><input id="modalSearch" type="text" placeholder="Recherche tolérante — colle le nom complet, la couleur et le format sont ignorés" oninput="renderOptions()"></div>
+    <div class="modal-sub"><span id="resCount"></span>
+      <select class="modal-sort" id="sortSel" onchange="renderOptions()">
+        <option value="rel">Tri : pertinence</option>
+        <option value="asc">Prix croissant</option>
+        <option value="desc">Prix décroissant</option>
+      </select>
+    </div>
+    <div class="modal-list" id="modalList"></div>
+  </div>
+</div>
+
+<script src="parts.js"></script>
+<script>
+const CATEGORIES=[
+  {id:'cpu',name:'Processeur',icon:'🧠'},
+  {id:'mobo',name:'Carte mère',icon:'🔲'},
+  {id:'ram',name:'Mémoire RAM',icon:'🟩'},
+  {id:'gpu',name:'Carte graphique',icon:'🎮'},
+  {id:'storage',name:'Stockage',icon:'💾'},
+  {id:'psu',name:'Alimentation',icon:'⚡'},
+  {id:'case',name:'Boîtier',icon:'📦'},
+  {id:'cooler',name:'Refroidissement',icon:'❄️'},
+];
+const DB=window.PARTS_DATA||{};
+const build={}; let activeCat=null;
+
+/* ---- tolerant search ---- */
+const STOP=new Set("le la les un une de des du d pour avec et ou noir noire blanc blanche black white grey gray silver argent rgb led verre trempe trempee glass tempered tinted aluminium alu acier steel mesh boitier boitiers pc tour tower mid full mini compact edition snow series go gb to nvme ssd hdd ddr".split(" "));
+function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(w=>w&&w.length>1&&!STOP.has(w));}
+function relScore(qWords,name){
+  if(!qWords.length) return 1;
+  const n=new Set(norm(name)); let hit=0;
+  for(const w of qWords){ if(n.has(w)) hit++; else { for(const nw of n){ if(nw.includes(w)||w.includes(nw)){hit+=0.5;break;} } } }
+  return hit/qWords.length;
+}
+
+function best(p){let v=null,m=Infinity;for(const k in p.p){if(p.p[k]<m){m=p.p[k];v=k;}}return{vendor:v,price:m};}
+const cat=id=>CATEGORIES.find(c=>c.id===id);
+
+function specLine(catId,p){
+  const t=[];
+  if(catId==='cpu'){t.push(p.socket);if(p.cores)t.push(p.cores+' cœurs');t.push(p.tdp+'W');if(p.igpu)t.push('iGPU');}
+  if(catId==='mobo'){t.push(p.socket);if(p.ram)t.push(p.ram);if(p.form)t.push(p.form);}
+  if(catId==='ram'){if(p.ram)t.push(p.ram);if(p.speed)t.push(p.speed+' MHz');if(p.kit)t.push(p.kit);}
+  if(catId==='gpu'){if(p.vram)t.push(p.vram+' Go');if(p.len)t.push(p.len+'mm');t.push(p.tdp+'W');}
+  if(catId==='storage'){if(p.cap)t.push((p.cap>=1000?(p.cap/1000)+' To':p.cap+' Go'));if(p.type)t.push(p.type);if(p.form)t.push(p.form);}
+  if(catId==='psu'){if(p.watt)t.push(p.watt+'W');if(p.eff)t.push(p.eff);if(p.modular)t.push(p.modular);}
+  if(catId==='case'){if(p.form)t.push(p.form);if(p.glass)t.push('verre trempé');if(p.color)t.push(p.color);}
+  if(catId==='cooler'){if(p.noise)t.push(p.noise+' dB');if(p.rpm)t.push(p.rpm+' RPM');}
+  return t.filter(Boolean).join(' · ')||'—';
+}
+
+function renderParts(){
+  const el=document.getElementById('parts');
+  el.innerHTML=CATEGORIES.map(c=>{
+    const sel=build[c.id];
+    if(sel){const b=best(sel);
+      return `<div class="part filled"><div class="part-ico">${c.icon}</div>
+        <div class="part-meta"><div class="part-cat">${c.name}</div><div class="part-name">${esc(sel.n)}</div><div class="part-spec">${specLine(c.id,sel)}</div></div>
+        <div class="part-price">${b.price.toFixed(2)} €<span class="vendor">chez ${b.vendor}</span></div>
+        <button class="part-act change" onclick="openModal('${c.id}')">Changer</button></div>`;
+    }
+    return `<div class="part"><div class="part-ico">${c.icon}</div>
+      <div class="part-meta"><div class="part-cat">${c.name}</div><div class="part-name empty">Aucun composant sélectionné</div></div>
+      <button class="part-act" onclick="openModal('${c.id}')">+ Ajouter</button></div>`;
+  }).join('');
+}
+function esc(s){return (s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+
+/* ---- modal ---- */
+function openModal(catId){activeCat=catId;document.getElementById('modalTitle').innerHTML=`${cat(catId).icon} ${cat(catId).name}`;document.getElementById('modalSearch').value='';document.getElementById('sortSel').value='rel';document.getElementById('overlay').classList.add('show');renderOptions();setTimeout(()=>document.getElementById('modalSearch').focus(),100);}
+function closeModal(){document.getElementById('overlay').classList.remove('show');}
+
+function renderOptions(){
+  const q=document.getElementById('modalSearch').value;
+  const sort=document.getElementById('sortSel').value;
+  const qWords=norm(q);
+  let list=DB[activeCat]||[];
+  if(qWords.length){
+    list=list.map(p=>({p,s:relScore(qWords,p.n)})).filter(x=>x.s>=0.34).sort((a,b)=>b.s-a.s||best(a.p).price-best(b.p).price);
+    list=list.map(x=>x.p);
+  } else {
+    list=[...list].sort((a,b)=>best(a.p).price-best(b.p).price);
+  }
+  if(sort==='asc')list.sort((a,b)=>best(a.p).price-best(b.p).price);
+  if(sort==='desc')list.sort((a,b)=>best(b.p).price-best(a.p).price);
+  const shown=list.slice(0,120);
+  document.getElementById('resCount').textContent=`${list.length} résultat${list.length>1?'s':''}${list.length>120?' (120 affichés)':''}`;
+  const ml=document.getElementById('modalList');
+  if(!shown.length){ml.innerHTML=`<div class="empty-res">Aucun composant trouvé.<br>Essaie moins de mots-clés.</div>`;return;}
+  ml.innerHTML=shown.map(p=>{
+    const b=best(p);const inc=optIncompat(activeCat,p);
+    return `<div class="opt ${inc?'incompatible':''}" onclick="selectPart('${activeCat}',${(DB[activeCat]).indexOf(p)})">
+      <div class="opt-info"><div class="opt-name">${esc(p.n)}</div><div class="opt-spec">${specTags(activeCat,p)}</div></div>
+      ${inc?`<div class="opt-badge">${inc}</div>`:''}
+      <div class="opt-price"><div class="p">${b.price.toFixed(2)} €</div><div class="v">meilleur · ${b.vendor}</div></div></div>`;
+  }).join('');
+}
+function specTags(catId,p){return specLine(catId,p).split(' · ').filter(x=>x&&x!=='—').map(x=>`<span class="tag">${esc(x)}</span>`).join('');}
+
+function optIncompat(catId,p){
+  if(catId==='mobo'&&build.cpu&&p.socket!==build.cpu.socket)return 'Socket ✗';
+  if(catId==='cpu'&&build.mobo&&p.socket!==build.mobo.socket)return 'Socket ✗';
+  if(catId==='ram'&&build.mobo&&build.mobo.ram&&p.ram&&p.ram!==build.mobo.ram)return build.mobo.ram+' requis';
+  if(catId==='mobo'&&build.ram&&build.ram.ram&&p.ram&&p.ram!==build.ram.ram)return 'RAM ✗';
+  if(catId==='case'&&build.gpu&&build.gpu.len&&caseMaxGpu(p)&&build.gpu.len>caseMaxGpu(p))return 'GPU trop long';
+  if(catId==='gpu'&&build.case&&p.len&&caseMaxGpu(build.case)&&p.len>caseMaxGpu(build.case))return 'Trop long';
+  return null;
+}
+function caseMaxGpu(c){const f=c.form;return f==='ITX'?330:f==='mATX'?345:400;}
+
+function selectPart(catId,idx){build[catId]=DB[catId][idx];closeModal();refresh();}
+
+/* ---- compatibility ---- */
+function estPower(){let w=80;if(build.cpu)w+=build.cpu.tdp;if(build.gpu)w+=build.gpu.tdp;return Math.round(w*1.25);}
+function runCompat(){
+  const I=[],c=build;
+  if(c.cpu&&c.mobo)I.push(c.cpu.socket===c.mobo.socket?{l:'ok',t:`CPU et carte mère partagent le socket ${c.cpu.socket}`}:{l:'err',t:`Socket incompatible : ${c.cpu.socket} (CPU) ≠ ${c.mobo.socket} (carte mère)`});
+  if(c.ram&&c.mobo&&c.ram.ram&&c.mobo.ram)I.push(c.ram.ram===c.mobo.ram?{l:'ok',t:`Mémoire ${c.ram.ram} compatible avec la carte mère`}:{l:'err',t:`RAM ${c.ram.ram} incompatible : la carte mère attend de la ${c.mobo.ram}`});
+  if(c.gpu&&c.case&&c.gpu.len){const mx=caseMaxGpu(c.case);I.push(c.gpu.len<=mx?{l:'ok',t:`Le GPU (${c.gpu.len}mm) rentre dans le boîtier ${c.case.form} (≤${mx}mm)`}:{l:'err',t:`GPU trop long : ${c.gpu.len}mm pour ~${mx}mm max en ${c.case.form}`});}
+  if(c.mobo&&c.case){const o={ITX:1,mATX:2,ATX:3};I.push((o[c.mobo.form]||9)<=(o[c.case.form]||0)?{l:'ok',t:`Format ${c.mobo.form} compatible avec le boîtier ${c.case.form}`}:{l:'warn',t:`Vérifie : carte mère ${c.mobo.form} dans un boîtier ${c.case.form}`});}
+  if(c.psu&&(c.cpu||c.gpu)){const n=estPower();I.push(c.psu.watt>=n?{l:'ok',t:`Alimentation suffisante : ${c.psu.watt}W pour ~${n}W estimés`}:{l:'err',t:`Alimentation trop faible : ${c.psu.watt}W pour ~${n}W estimés`});}
+  if(c.ram&&c.mobo&&c.mobo.maxmem&&c.ram.cap&&c.ram.cap>c.mobo.maxmem)I.push({l:'warn',t:`RAM ${c.ram.cap}Go > max carte mère (${c.mobo.maxmem}Go)`});
+  return I;
+}
+function renderCompat(){
+  const I=runCompat(),list=document.getElementById('compatList'),dot=document.getElementById('compatDot'),st=document.getElementById('compatStatus'),n=Object.keys(build).length;
+  if(!n){list.innerHTML=`<div class="compat-empty">Ajoute des composants pour vérifier qu'ils fonctionnent ensemble.</div>`;dot.className='compat-dot ok';st.textContent='Aucun composant';document.getElementById('psuMeter').style.display='none';return;}
+  const err=I.some(i=>i.l==='err'),warn=I.some(i=>i.l==='warn');
+  dot.className='compat-dot '+(err?'err':warn?'warn':'ok');st.textContent=err?'Incompatibilité détectée':warn?'À vérifier':'Tout est compatible';
+  list.innerHTML=I.length?I.map(i=>`<div class="compat-item ${i.l}"><span class="ci">${i.l==='ok'?'✓':i.l==='warn'?'!':'✗'}</span><span>${i.t}</span></div>`).join(''):`<div class="compat-empty">Ajoute des composants liés (CPU + carte mère, GPU + boîtier…) pour lancer les vérifications.</div>`;
+  if(build.cpu||build.gpu){const need=estPower();document.getElementById('psuMeter').style.display='block';const cap=build.psu?build.psu.watt:Math.max(need,650);document.getElementById('psuFill').style.width=Math.min(100,Math.round(need/cap*100))+'%';document.getElementById('psuLoad').textContent=`~${need} W estimés`;document.getElementById('psuCap').textContent=build.psu?`${cap} W alim`:'pas d\'alim';}else document.getElementById('psuMeter').style.display='none';
+}
+function renderSummary(){
+  const rows=document.getElementById('summaryRows');let total=0;const L=[];
+  for(const c of CATEGORIES)if(build[c.id]){const b=best(build[c.id]);total+=b.price;L.push(`<div class="total-row"><span class="lbl">${c.icon} ${esc(build[c.id].n)}</span><span class="val">${b.price.toFixed(2)} €</span></div>`);}
+  rows.innerHTML=L.join('')||`<div class="compat-empty" style="margin-bottom:4px">Ton récap apparaîtra ici.</div>`;
+  document.getElementById('grandTotal').textContent=total.toFixed(2)+' €';
+  document.getElementById('buyBtn').disabled=total===0||runCompat().some(i=>i.l==='err');
+}
+function showBuy(){
+  const byV={};for(const c of CATEGORIES)if(build[c.id]){const b=best(build[c.id]);(byV[b.vendor]=byV[b.vendor]||[]).push(`${build[c.id].n} — ${b.price.toFixed(2)}€`);}
+  let msg='Pour le meilleur prix, répartis ta commande :\n\n';for(const v in byV)msg+=`▸ ${v}\n  `+byV[v].join('\n  ')+'\n\n';
+  alert(msg+'(Démo : ici s\'ouvriraient les liens marchands)');
+}
+function refresh(){renderParts();renderCompat();renderSummary();}
+function resetBuild(){for(const k in build)delete build[k];refresh();}
+function shareBuild(){const sel=CATEGORIES.filter(c=>build[c.id]).map(c=>'• '+build[c.id].n);if(!sel.length){alert('Ajoute au moins un composant.');return;}const t='Mon build FORGE :\n'+sel.join('\n');navigator.clipboard?.writeText(t).then(()=>alert('Build copié ✓')).catch(()=>alert(t));}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+let total=0;for(const k in DB)total+=DB[k].length;
+document.getElementById('catalogCount').innerHTML=`<b>${total.toLocaleString('fr-FR')}</b> composants réels dans le catalogue`;
+refresh();
+</script>
+</body>
+</html>
